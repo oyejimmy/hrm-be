@@ -80,16 +80,28 @@ FastAPI automatically generates interactive API docs:
 
 ---
 
-## ✅ Features (Planned & Ongoing)
+## ✅ Features (Implemented)
 - [x] User Authentication (Signup, Login, JWT)  
-- [ ] Employee Profile Management  
-- [ ] Attendance Tracking  
-- [ ] Leave Management  
-- [ ] Payroll System  
-- [ ] Recruitment Workflow  
-- [ ] Performance Tracking  
-- [ ] Training Management  
-- [ ] Notifications & Alerts  
+- [x] Employee Profile Management  
+- [x] Attendance Tracking  
+- [x] Leave Management  
+- [x] Payroll System  
+- [x] Recruitment Workflow  
+- [x] Performance Tracking  
+- [x] Training Management  
+- [x] Announcements & Events  
+- [x] Teams & Projects (Org)  
+
+### Seeded Accounts
+- Admin: `admin@example.com` / `admin123`
+- Manager: `lead@example.com` / `lead123`
+- Employee: `emp@example.com` / `emp123`
+
+### Quickstart
+```bash
+uvicorn app.main:app --reload
+```
+Open http://127.0.0.1:8000/docs
 
 ---
 
