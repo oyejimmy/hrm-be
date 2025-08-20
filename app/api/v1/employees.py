@@ -4,7 +4,7 @@ from datetime import datetime
 from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, File, UploadFile, Form
 from starlette.responses import FileResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from sqlalchemy.orm import Session
 
 from app.auth.security import get_current_user, require_roles
@@ -43,8 +43,7 @@ class UserOut(BaseModel):
     full_name: str
     role: str
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class DocumentCreate(BaseModel):
